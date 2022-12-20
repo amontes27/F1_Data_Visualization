@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+<link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
+
+
+
+<title>More Than Speed: Visualizing the Pinnacle of Motorsport</title>
+
+
+
+
+
+
+<style>
+@page {
+size: 50in 46in;
+margin: 0;
+padding: 0;
+}
+body {
+margin: 0;
+font-size: 42px;
+width: 50in;
+height: 46in;
+padding: 0;
+text-align: justify;
+font-family: Titillium Web;
+}
+.poster_wrap {
+width: 50in;
+height: 46in;
+padding: 0cm;
+}
+.title_container {
+width: 50in;
+height: calc(46in * 0.15);
+overflow: hidden;
+background-color: #FF1801;
+border: 0.4cm solid #000000;
+}
+.logo_left {
+float: left;
+width: 10%;
+height: 100%;
+background-color: #FF1801;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.logo_right {
+float: right;
+width: 10%;
+height: 100%;
+background-color: #FF1801;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.poster_title {
+text-align: center;
+position: relative;
+float: left;
+width: 80%;
+height: 100%;
+color: #FFFFFF;
+top: 50%;
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+}
+#title {
+font-family: Titillium Web;
+}
+/* unvisited link */
+a:link {
+color: #d44c5c;
+}
+.mybreak {
+  break-before: column;
+}
+/* visited link */
+a:visited {
+color: #d44c5c;
+}
+
+/* mouse over link */
+a:hover {
+color: #d44c5c;
+}
+
+/* selected link */
+a:active {
+color: #d44c5c;
+}
+.poster_body {
+-webkit-column-count: 4; /* Chrome, Safari, Opera */
+-moz-column-count: 4; /* Firefox */
+column-count: 4;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 1mm;
+-moz-column-rule-width: 1mm;
+column-rule-width: 1mm;
+-webkit-column-rule-style: dashed;
+-moz-column-rule-style: dashed;
+column-rule-style: dashed;
+-webkit-column-rule-color: #d44c5c;
+-moz-column-rule-color: #d44c5c;
+column-rule-color: #d44c5c;
+column-gap: 0.4cm;
+padding-left: calc(0.4cm / 2);
+padding-right: calc(0.4cm / 2);
+height: 100%;
+color: #000000
+background-color: #ffffff;
+}
+.poster_title h1 {
+font-size: 75pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_body_wrap{
+width: calc(50in + 0.4cm + 0.4cm);
+height: calc(46in * 0.83);
+padding-top: calc(46in * 0.005);
+padding-bottom: calc(46in * 0.01);
+background-color: #ffffff;
+}
+.poster_title h3 {
+color: #000000;
+font-size: 50pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_title h3 > sup {
+  font-size: 35pt;
+  margin-left: 0.02em;
+}
+.poster_title h5 {
+color: #000000;
+font-size: 35pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+img {
+margin-top: 2cm;
+margin-bottom: 0;
+}
+.section {
+  padding: 0.2em;
+}
+.poster_body h1 {
+text-align: center;
+color: #FFFFFF;
+font-size: 50pt;
+border: 1mm solid #FF1801;
+background-color: #FF1801;
+border-radius: 4mm 0mm;
+margin-top: 2mm;
+margin-bottom: 2mm;
+font-weight: normal;
+}
+.poster_body h2 {
+color: #000000;
+font-size: 40pt;
+padding-left: 4mm;
+font-weight: normal;
+}
+.span {
+width: 200%;
+}
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+/* align-items: center; */
+margin: auto;
+padding-left: 2cm;
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+.caption {
+font-size: 25pt;
+}
+.table caption {
+font-size: 25pt;
+padding-bottom: 3mm;
+
+}
+code {
+font-size: 1em;
+font-family: monospace;
+background-color: #00000024;
+color: #FF1801;
+padding: 1.2mm;
+border-radius: 2mm;
+}
+.poster_title code {
+font-size: 1em;
+}
+table {
+font-size: 40px;
+margin: auto;
+border-top: 3px solid #666;
+border-bottom: 3px solid #666;
+}
+table thead th {
+border-bottom: 3px solid #ddd;
+}
+td {
+padding: 8px;
+}
+th {
+padding: 15px;
+}
+caption {
+margin-bottom: 10px;
+}
+.poster_body p {
+margin-right: 4mm;
+margin-left: 4mm;
+margin-top: 6mm;
+margin-bottom: 10mm;
+}
+.poster_body ol {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+#ul {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+.references p {
+font-size: 20pt;
+}
+.orcid img {
+  width: 1em;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="title_container">
+<!-- Left Logo  -->
+<div class="logo_left">
+<img src= 'f1logo.png' style="width: 80%">
+</div>
+<!-- Poster Title -->
+<div class= "poster_title">
+<h1 id="title">More Than Speed: Visualizing the Pinnacle of Motorsport</h1>
+<h3 id="author">Alex Montes<sup></sup></h3><br>
+<h5 id="affiliation"><sup></sup> Department of Statistics, Northwestern University</h5>
+</div>
+<!-- Right Logo  -->
+<div class="logo_right">
+<img src=fialogo.png style="width: 80%">
+</div>
+</div>
+
+<div class='poster_body_wrap'>
+<div class='poster_body'>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>Formula One (F1) has served as the world’s highest level of open-wheel racing for over 70 years. While its popularity has fluctuated over time, the sport has recently experienced a resurgence thanks to its increased Internet presence after an ownership change in 2017. Given F1’s rich history and nuances, informative data visualizations can help new fans quickly understand the sport’s past and present.</p>
+</div>
+<div id="the-best-drivers-and-teams-of-all-time" class="section level1">
+<h1>The Best Drivers and Teams of All Time</h1>
+<p>Although fans consider many factors when debating the greatest F1 driver of all time, drivers’ total career race wins serve as a simple but informative metric. Since the length of an F1 season and drivers’ careers have varied over time, it is also helpful to examine a driver’s win rate as determined by their total wins divided by total races entered. Figure <a href="#fig:drv-wins">1</a> depicts both of these statistics using bar plots.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:drv-wins"></span>
+<img src="drv_bars.png" alt="Bar plots of the top 10 driver win counts and their win rates." width="100%" />
+<p class="caption">
+Figure 1: Bar plots of the top 10 driver win counts and their win rates.
+</p>
+</div>
+<p>Figure <a href="#fig:drv-wins">1</a> highlights Lewis Hamilton and Michael Schumacher as the winningest F1 drivers of all time by a large margin. Along with Hamilton, the plot also features two other current drivers in Sebastian Vettel and Fernando Alonso. While Hamilton remains the top driver in terms of win rate, Alonso and Vettel are ranked lower mainly due to their long careers and lower present-day success. Meanwhile, Jim Clark and Jackie Stewart move up the rankings compared to their win totals. Both drivers raced during the 1960s, which featured significantly shorter seasons than modern F1. As a result, their total wins are relatively low but their win rates are higher than most drivers.</p>
+<p>A similar analysis can be done for F1’s many teams to find the longest-running and most successful ones. Figure <a href="#fig:team-wins">2</a> displays the top 10 F1 teams by win count and their respective win rates.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:team-wins"></span>
+<img src="team_bars.png" alt="Bar plots of the top 10 team win counts and their win rates." width="100%" />
+<p class="caption">
+Figure 2: Bar plots of the top 10 team win counts and their win rates.
+</p>
+</div>
+<p>Figure <a href="#fig:team-wins">2</a> indicates that Ferrari is the most successful F1 team of all time. Additionally, it is the only team to have competed in every F1 season since 1950. All of the top 5 winningest teams remain in the sport today, highlighting how success leads to longevity. While Mercedes has competed in fewer seasons than many of the top teams, it has dominated the sport in recent years, winning every Constructors’ Championship since 2014 and taking first place in nearly half of the races it has entered. While this success is partly due to having the fastest car, having one of the greatest drivers of all time in Lewis Hamilton has propelled the team to untouchable status.</p>
+</div>
+<div id="what-makes-an-exciting-race" class="section level1">
+<h1>What Makes an Exciting Race?</h1>
+<p>Many aspects of an F1 race can make it exciting, but a common statistic used to objectively evaluate a race’s quality is the number of overtakes that occur. The FIA, the sport’s governing body, often changes the rules and regulations to promote overtaking while improving safety. While the regulations change every year and have included changes to the tires and aerodynamic components of the cars, fans often group regulations into “eras” based on the type of engine used. Figure <a href="#fig:pos-box">3</a> depicts the distribution of race overtakes from 2000 to 2021 based on the type of engine used in the cars.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:pos-box"></span>
+<img src="pos_box.png" alt="Box plot of overtakes per driver per race from 2000 to 2021." width="100%" />
+<p class="caption">
+Figure 3: Box plot of overtakes per driver per race from 2000 to 2021.
+</p>
+</div>
+<p>Figure <a href="#fig:pos-box">3</a> indicates that overtaking has declined overall since 2000. While the median overtakes are similar across the V8 and V6 eras, the variance of overtaking is lower in the V6 era, suggesting that “boring” races happen more consistently. This trend may be partly due to the different engines used, but increasingly complex car aerodynamics across eras have also been blamed for generating “dirty air” that makes it more difficult to overtake. F1 cars have also become longer and wider over this period, leaving less room for passing to occur. Overall, this plot provides insight into the reasoning behind the new 2022 regulations that aim to simplify cars’ aerodynamics and increase overtaking.</p>
+</div>
+<div id="the-2021-season-a-new-champion" class="section level1">
+<h1>The 2021 Season: A New Champion</h1>
+<p>After seven years of F1 domination from Lewis Hamilton and Mercedes, many fans were ready for new title challengers in 2021. While Max Verstappen and team Red Bull had been strong performers in recent years, 2021 marked the first time they could truly contend for the championship in the V6 era. Figure <a href="#fig:standings-line">4</a> displays each driver’s cumulative championship points across each round of the 2021 season.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:standings-line"></span>
+<img src="standings_line.png" alt=" Line plot of WDC standings for each round of the 2021 season." width="100%" />
+<p class="caption">
+Figure 4:  Line plot of WDC standings for each round of the 2021 season.
+</p>
+</div>
+<p>Figure <a href="#fig:standings-line">4</a> highlights the close competition between Verstappen and Hamilton for the 2021 World Drivers’ Championship. Ultimately, Verstappen emerged as the winner after a last-lap overtake on Hamilton in the final race of the season. The plot also highlights that both drivers were far ahead of their teammates despite driving the same cars. This stresses the importance of both team and driver performance when competing for a title.</p>
+<p>While championship points ultimately matter the most, further analyzing a driver’s performance can provide insights into their strengths, weaknesses, and how they compare to their teammates. Figure <a href="#fig:quali-race-scatter">5</a> shows the 2021 drivers’ average race finishing positions plotted against their average qualifying positions.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:quali-race-scatter"></span>
+<img src="quali_race_scatter.png" alt="Scatterplot of average finishing position versus average qualifying position." width="100%" />
+<p class="caption">
+Figure 5: Scatterplot of average finishing position versus average qualifying position.
+</p>
+</div>
+<p>Overall, the trend in Figure <a href="#fig:quali-race-scatter">5</a> is similar to that of Figure <a href="#fig:standings-line">4</a>, with the top drivers in the bottom left of the scatterplot. Examining the points’ positions relative to the 45-degree line reveals drivers’ strengths. For instance, Sergio Perez (PER) and Pierre Gasly (GAS) were relatively strong qualifiers but tended to lose positions during races. On the other hand, drivers like Daniel Riccardio (RIC) and Lance Stroll (STR) typically qualified behind their teammates but closed the gap during races.</p>
+</div>
+<div id="conclusion" class="section level1">
+<h1>Conclusion</h1>
+<p>F1’s long history and many performance indicators make visualization very useful in introducing new fans to the sport. While recent races have been less exciting and dominated by Lewis Hamilton and Mercedes, but there are signs that these trends began to change in 2021. New drivers, improved teams, and disruptive regulation changes can all contribute to a better viewer experience. Although the 2022 season is less than halfway over, excitement has grown as Charles Leclerc and team Ferrari have begun to challenge for the championship for the first time in several years.</p>
+</div>
+<div id="data-source" class="section level1">
+<h1>Data Source</h1>
+<p>Rao, R. (2022, April 11). Formula 1 World Championship (1950-2022), <a href="https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020" class="uri">https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020</a></p>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+</body>
+</html>
