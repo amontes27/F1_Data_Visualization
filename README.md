@@ -1,4 +1,4 @@
-# F1_Data_Visualization
+# F1 Data Visualization
 R code used to create plots and a poster presentation visualizing a [Formula 1 dataset](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020)
 
 ---
